@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Klassen/Klassen.csproj" />
+  <Project Path="LibraryProject/LibraryProject.CLI.csproj" />
+</Solution>
