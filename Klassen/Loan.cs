@@ -87,6 +87,10 @@ namespace Klassen
                 Console.WriteLine(e.Message);
             }
         }
+        public bool GetStatus()
+        {
+            return _isActive; 
+        }
         public void GetInfo()
         {
             try
@@ -103,7 +107,7 @@ namespace Klassen
                     }
                     else
                     {
-                        infotext += "Rückgabe ausstehen.";
+                        infotext += "Rückgabe ausstehend.";
                     }
 
                     Console.WriteLine(infotext);
@@ -118,7 +122,7 @@ namespace Klassen
                 Console.WriteLine(e.Message);
             }
         }
-        public void EndLoan(int id)
+        public void EndLoan()
         {
             this._endDate = DateTime.Now;
             this._media.SetUnits(this._media.GetUnits() + 1);

@@ -10,6 +10,10 @@ namespace Klassen
         private uint _pages = 250;
         private string _isbn = "";
 
+        public Book()
+        {
+            SetId(-1);
+        }
         public Book(ref LibraryService service, string title, string author, DateTime pubdate,string isbn = "", uint pages = 0, string desc = "", int units = 0)
         {
             SetId(service.ReturnBooks().Count + 1);           

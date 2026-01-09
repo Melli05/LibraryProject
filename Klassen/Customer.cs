@@ -14,6 +14,10 @@ namespace Klassen
         private DateTime _registrationDate;
         public List<MediaBase> History { get; private set; }
 
+        public Customer()
+        {
+            _id = -1;
+        }
         public Customer(ref LibraryService service,string fullName, string adress, DateTime birthday)
         {
             _id = service.ReturnCustomers().Count + 1;
@@ -23,14 +27,12 @@ namespace Klassen
             _registrationDate = DateTime.Now;
             History = new List<MediaBase>();
         }
-
         public int GetId()
         {
             return _id;
         }
         public string[] GetDetails(int Id)
         {
-            // Muss in CustomerListe nach Id suchen
             return new string[] {_fullName, _adress};
         }
         public void PrintHistory()

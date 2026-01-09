@@ -19,6 +19,10 @@ namespace Klassen
                 {
                     this._id = id;
                 }
+                else if(id == -1) // für Placeholders
+                {
+                    this._id = id;
+                }
                 else
                 {
                     throw new Exception("ID des Mediums kann nicht kleiner oder gleich 0 sein.");

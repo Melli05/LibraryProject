@@ -9,6 +9,10 @@ namespace Klassen
         private string _director;
         private uint _runtime = 107; // in Minuten
 
+        public Dvd()
+        {
+            this.SetId(-1);
+        }
         public Dvd(ref LibraryService service, string title, string director, DateTime pubdate, uint runtime = 0, string desc = "", int units = 0)
         {
             SetId(service.ReturnDvds().Count + 1);

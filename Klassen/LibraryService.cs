@@ -200,5 +200,21 @@ namespace Klassen
                 return null;
             }
         }
+        public void Remove(Book book)
+        {
+            _books.Remove(book);
+        }
+        public void Remove(Dvd dvd)
+        {
+            _dvds.Remove(dvd);
+        }
+        public void Remove(Customer customer)
+        {
+            _customers.Remove(customer);
+        }
+        public void Remove(Loan loan)
+        {
+            _loans.Remove(loan);
+        }
     }
 }
