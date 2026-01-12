@@ -58,7 +58,7 @@ namespace Klassen
                               $"Titel: {GetTitle()}\n" +
                               $"Autor: {GetAuthor()}\n" +
                               $"ISBN: {this._isbn}\n" +
-                              $"Veröffentlichung: {GetPubDate()}\n" +
+                              $"Veröffentlichung: {GetPubDate().ToShortDateString()}\n" +
                               $"Seitenanzahl: {GetPages()}\n" +
                               $"Momentan verleihbare Einheiten: {GetUnits()}\n" +
                               $"Beschreibung: {GetDescription()}\n");

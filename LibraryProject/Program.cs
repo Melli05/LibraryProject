@@ -1,4 +1,5 @@
 ﻿using Klassen;
+using System.Data;
 
 namespace LibraryProject.CLI
 {
@@ -159,7 +160,7 @@ namespace LibraryProject.CLI
 
                                             foreach (Dvd D in Service.ReturnDvds())
                                             {
-                                                Console.WriteLine($"{D.GetId()} {D.GetTitle()} ({D.GetPubDate().ToShortDateString()}) von {D.GetDirector()}");
+                                                D.PrintInfo();
                                             }
                                             Console.WriteLine("\nEnter um zum Menü zurückzukehren");
                                             Console.ReadLine();
@@ -172,7 +173,7 @@ namespace LibraryProject.CLI
 
                                             foreach (Book B in Service.ReturnBooks())
                                             {
-                                                Console.WriteLine($"{B.GetId()} {B.GetTitle()} ({B.GetPubDate().ToShortDateString()}) von {B.GetAuthor()}");
+                                                B.PrintInfo();
                                             }
                                             Console.WriteLine("\nEnter um zum Hauptmenü zurückzukehren");
                                             Console.ReadLine();

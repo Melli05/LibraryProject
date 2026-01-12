@@ -101,13 +101,13 @@ namespace Klassen
                                       $"Kunde: {this._customer.GetDetails(this._customer.GetId())[0]}, {this._customer.GetDetails(this._customer.GetId())[1]}\n" +
                                       $"verliehenes Medium: {this._media.GetMediaType()} - {this._media.GetTitle()}\n" +
                                       $"ausgeliehen am: {this._startDate.ToShortDateString()}\n";
-                    if (this._endDate != DateTime.MaxValue)
+                    if (this._endDate != DateTime.MaxValue) // weil MaxValue bedeutet, dass das Buch noch nicht zurückgegeben wurde
                     {
                         infotext += $"zurückgegeben am: {this._endDate}\n";
                     }
                     else
                     {
-                        infotext += $"Rückgabe ausstehend, fällig am: {this._dueDate.ToShortDateString()}";
+                        infotext += $"Rückgabe ausstehend, fällig am: {this._dueDate.ToShortDateString()}\n";
                     }
 
                     Console.WriteLine(infotext);

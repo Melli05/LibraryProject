@@ -38,7 +38,6 @@ namespace Klassen
         {
             return _director; 
         }
-
         public string GetRuntime()
         {
             uint stunde = _runtime / 60;
@@ -54,13 +53,12 @@ namespace Klassen
                     return $"{minute} Minuten";
             }
         }
-
         public override void PrintInfo()
         {
             Console.WriteLine($"Film-ID: {GetId()}\n" +
                               $"Titel: {GetTitle()}\n" +
                               $"Director: {GetDirector()}\n" +
-                              $"Veröffentlichung: {GetPubDate()}\n" +
+                              $"Veröffentlichung: {GetPubDate().ToShortDateString()}\n" +
                               $"Laufzeit: {GetRuntime()}\n" +
                               $"Momentan verleihbare Einheiten: {GetUnits()}\n" +
                               $"Beschreibung: {GetDescription()}\n");
