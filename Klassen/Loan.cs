@@ -32,7 +32,7 @@ namespace Klassen
                 else
                 {
                     _isActive = false;
-                    throw new Exception("Buch kann nicht verliehenw werden, keine Exemplare verfügbar.");
+                    throw new Exception("Buch kann nicht verliehen werden, keine Exemplare verfügbar.");
                 }
             }
             catch (Exception e)
@@ -107,7 +107,7 @@ namespace Klassen
                     }
                     else
                     {
-                        infotext += "Rückgabe ausstehend.";
+                        infotext += $"Rückgabe ausstehend, fällig am: {this._dueDate.ToShortDateString()}";
                     }
 
                     Console.WriteLine(infotext);
