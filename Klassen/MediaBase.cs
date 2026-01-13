@@ -73,7 +73,7 @@ namespace Klassen
         {
             _description = desc; 
         }
-        public string GetDescription()
+        public virtual string GetDescription()
         {
             return _description;
         }

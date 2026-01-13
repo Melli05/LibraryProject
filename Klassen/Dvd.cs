@@ -34,6 +34,10 @@ namespace Klassen
                 SetUnits(units);
             }
         }
+        public override string GetDescription()
+        {
+            return $"Die Beschreibung des Films lautet wie folgt:\n{base.GetDescription()}";
+        }
         public string GetDirector()
         {
             return _director; 
@@ -61,7 +65,7 @@ namespace Klassen
                               $"Veröffentlichung: {GetPubDate().ToShortDateString()}\n" +
                               $"Laufzeit: {GetRuntime()}\n" +
                               $"Momentan verleihbare Einheiten: {GetUnits()}\n" +
-                              $"Beschreibung: {GetDescription()}\n");
+                              $"{this.GetDescription()}\n");
         }
     }
 }

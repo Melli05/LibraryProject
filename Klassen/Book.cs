@@ -14,29 +14,33 @@ namespace Klassen
         {
             SetId(-1);
         }
-        public Book(ref LibraryService service, string title, string author, DateTime pubdate,string isbn = "", uint pages = 0, string desc = "", int units = 0)
+        public Book(ref LibraryService service, string title, string author, DateTime pubdate, string isbn = "", uint pages = 0, string desc = "", int units = 0)
         {
-            SetId(service.ReturnBooks().Count + 1);           
+            SetId(service.ReturnBooks().Count + 1);
             SetMediaType(MediaType.Buch);
             SetTitle(title);
             _author = author;
             SetPubDate(pubdate);
-            if(pages != 0)
+            if (pages != 0)
             {
                 _pages = pages;
             }
-            else if(desc != "")
+            if (desc != "")
             {
                 SetDescription(desc);
             }
-            else if(units != 0)
+            if (units != 0)
             {
-                SetUnits(units); 
+                SetUnits(units);
             }
-            else if(isbn != "")
+            if (isbn != "")
             {
                 _isbn = isbn;
             }
+        }
+        public override string GetDescription()
+        {
+            return $"Die Beschreibung des Buchs lautet wie folgt:\n{base.GetDescription()}";
         }
         public string GetAuthor()
         {
@@ -61,7 +65,7 @@ namespace Klassen
                               $"Veröffentlichung: {GetPubDate().ToShortDateString()}\n" +
                               $"Seitenanzahl: {GetPages()}\n" +
                               $"Momentan verleihbare Einheiten: {GetUnits()}\n" +
-                              $"Beschreibung: {GetDescription()}\n");
+                              $"{this.GetDescription()}\n");
         }
     }
 }
