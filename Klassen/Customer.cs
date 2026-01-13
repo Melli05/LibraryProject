@@ -14,7 +14,7 @@ namespace Klassen
         private DateTime _registrationDate;
         public List<MediaBase> History { get; private set; }
 
-        public Customer()
+        public Customer() // Konstruktor nur für Placeholder
         {
             _id = -1;
         }

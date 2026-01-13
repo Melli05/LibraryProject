@@ -10,7 +10,7 @@ namespace Klassen
         private uint _pages = 250;
         private string _isbn = "";
 
-        public Book()
+        public Book() // Placeholder Konstruktor
         {
             SetId(-1);
         }

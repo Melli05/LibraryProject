@@ -136,6 +136,13 @@ namespace LibraryProject.CLI
                                     {
                                         Kunde.PrintHistory();
                                     }
+                                    else
+                                    {
+                                        Console.WriteLine("Kein Kunde zu dieser ID gefunden.");
+                                    }
+                                    Console.WriteLine("Enter um zurückzukehren.\n");
+                                    Console.ReadLine();
+                                    Console.Clear();
                                     break;
                             }
                             break;

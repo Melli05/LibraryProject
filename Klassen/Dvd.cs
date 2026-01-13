@@ -9,7 +9,7 @@ namespace Klassen
         private string _director;
         private uint _runtime = 107; // in Minuten
 
-        public Dvd()
+        public Dvd() // Placeholder Konstruktor
         {
             this.SetId(-1);
         }
