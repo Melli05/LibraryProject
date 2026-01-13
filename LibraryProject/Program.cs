@@ -105,10 +105,11 @@ namespace LibraryProject.CLI
                             break;
 
                         case 2:
-                            Console.Write("Was möchten Sie tun?\n" +
+                            Console.WriteLine("Was möchten Sie tun?\n" +
                                           "0 - Zurück zum Hauptmenü\n" +
                                           "1 - Kunden hinzufügen\n" +
-                                          "2 - Kunden entfernen\n");
+                                          "2 - Kunden entfernen\n" +
+                                          "3 - Kundenhistorie einsehen\n");
                             Console.Write("Ihre Auswahl:");
                             Eingabe = int.Parse(Console.ReadLine()!);
 
@@ -124,6 +125,17 @@ namespace LibraryProject.CLI
                                 case 2:
                                     Console.Clear();
                                     Funktionen.RemoveCustomer(ref Service);
+                                    break;
+                                case 3:
+                                    Console.Clear();
+                                    Console.WriteLine("Bitte ID des betroffenen Kunden angeben.\n");
+                                    Console.Write("Kunden-ID:");
+                                    Eingabe = int.Parse(Console.ReadLine()!);
+                                    Customer Kunde = Service.GetSpecificCustomer(Eingabe);
+                                    if (Kunde != null)
+                                    {
+                                        Kunde.PrintHistory();
+                                    }
                                     break;
                             }
                             break;
